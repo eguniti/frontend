@@ -12,14 +12,14 @@ html(lang='en')
   body
     .table-data
       h2 Display Data using Node.js & MySQL
-      |         <%
-      |         if(employeeData.length!=0){
-      |         var i=1;
-      |         employeeData.forEach(function(data){
-      |         %>
-      |         <%  i++; }) %>
-      |         <% } else{ %>
-      |         <% } %>
+               <%
+               if(employeeData.length!=0){
+               var i=1;
+               employeeData.forEach(function(data){
+               %>
+               <%  i++; }) %>
+               <% } else{ %>
+               <% } %>
       table(border='1')
         tbody
           tr
