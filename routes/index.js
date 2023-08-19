@@ -7,7 +7,6 @@ var api_url =  process.env.API_HOST + '/api/status';
 console.log(api_url);
 
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   request(
@@ -24,14 +23,15 @@ router.get('/', function(req, res, next) {
         return res.status(500).send('error running request to ' + api_url);
       } else {
         res.render('index', {
-          title: 'Welcome to Employee Details of NAGARRO Company' ,
-          request_uuid: body.request_uuid,
+          //title: 'Welcome to Employee Details of the NAGARRO Company' ,
+          //request_uuid: body.request_uuid,
           //time: body.time
-          id: body.id,
-          name: body.name,
-          age: body.age,
-          address: body.address,
-          salary: body.salary
+          //id: body.id,
+          //name: body.name,
+          //age: body.age,
+          //address: body.address,
+          //salary: body.salary
+          employeeData: body
         });
       }
     }
