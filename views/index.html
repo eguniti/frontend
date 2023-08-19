@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+</head>
+<body>
+    <div class="table-data">
+<h2>Display Data using Node.js & MySQL</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Salary</th>
+        </tr>
+        
+        <%
+        if(empolyeeData.length!=0){
+        var i=1;
+        empolyeeData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=data.id; %></td>
+            <td><%=data.name %></td>
+            <td><%=data.age %></td>
+            <td><%=data.address %></td>
+            <td><%=data.salary %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
